@@ -4,6 +4,7 @@ import Home from "../pages/home/Home";
 import Menu from "../pages/menu/Menu";
 import PageNotFound from "./PageNotFound";
 import CheckOrder from "../pages/admin/check-order/CheckOrder";
+import AdminLayout from "../layouts/AdminLayout";
 
 export default function Navigations() {
   return (
@@ -17,6 +18,8 @@ export default function Navigations() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/menu" element={<Menu />} />
+        </Route>
+        <Route element={<AdminLayout />}>
           <Route path="/check-order" element={<CheckOrder />} />
         </Route>
       </Routes>
