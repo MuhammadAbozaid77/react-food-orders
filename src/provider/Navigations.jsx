@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout";
 import Home from "../pages/home/Home";
 import Menu from "../pages/menu/Menu";
 import PageNotFound from "./PageNotFound";
+import CheckOrder from "../pages/admin/check-order/CheckOrder";
 
 export default function Navigations() {
   return (
@@ -16,6 +17,7 @@ export default function Navigations() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="/check-order" element={<CheckOrder />} />
         </Route>
       </Routes>
     </>
