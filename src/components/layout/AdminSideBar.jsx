@@ -1,20 +1,29 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import { sideBarNavData } from "../../utils/AdminLinksIcons.jsx";
 
 export default function AdminSideBar() {
   return (
-    <div className="bg-red-600 lg:w-[350px]">
+    <div className="bg-white lg:w-[350px] h-[100%] md:block hidden">
       <Logo />
-      <ul className="py-2  px-[30px] flex flex-col gap-1">
+      <ul className="py-2 px-[30px] flex flex-col gap-1">
         {sideBarNavData?.map((el, index) => (
           <li
             key={index}
-            className=" p-1 text-white font-semibold text-[20px] capitalize"
+            className="p-1 text-gray-500 font-semibold text-[20px] capitalize"
           >
-            <Link className="" to={el.href}>
-              {el.name}
-            </Link>
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-3 ${isActive ? "text-red-500" : ""}`
+              }
+              to={el.href}
+            >
+              <span>{el?.icon}</span>
+              <span>{el?.name}</span>
+              {({ isActive }) =>
+                isActive && <span className="text-red-500"> ●</span>
+              }
+            </NavLink>
           </li>
         ))}
       </ul>
