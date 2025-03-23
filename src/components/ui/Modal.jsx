@@ -45,14 +45,14 @@ function Window({ children, windowName }) {
 
       <div className="fixed left-0 top-0 z-[1000] h-full w-full">
         <div
-          className={`p-8 fixed left-[50%] top-[50%] z-50 max-h-[80vh] w-[90%] translate-x-[-50%] translate-y-[-50%] overflow-auto rounded-lg bg-white shadow-md md:w-[750px]`}
+          className={`p-[50px] fixed left-[50%] top-[50%] z-50 max-h-[80vh] w-[90%] translate-x-[-50%] translate-y-[-50%] overflow-auto rounded-[30px] bg-white shadow-md md:w-[750px]`}
         >
           <button
             aria-label={t("general.close")}
             title={t("general.close")}
             onClick={closeModal}
             className={`absolute ${
-              i18n.language === "ar" ? "left-[10px]" : "right-[10px]"
+              i18n.language === "ar" ? "left-[20px]" : "right-[20px]"
             } top-[10px] text-red-500 cursor-pointer`}
           >
             <FaTimes size={25} />

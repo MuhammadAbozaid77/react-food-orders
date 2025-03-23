@@ -9,7 +9,9 @@ export default function AddNewCategoryModal() {
         <Button> Add New Category </Button>
       </Modal.Open>
       <Modal.Window windowName={"AddNewCategoryModal"}>
-        <AddNewCategoryForm />
+        <div className="flex justify-center items-center">
+          <AddNewCategoryForm />
+        </div>
       </Modal.Window>
     </Modal>
   );
