@@ -1,5 +1,6 @@
 import Button from "../../../components/ui/Button";
 import Modal from "../../../components/ui/Modal";
+import AddNewCategoryForm from "./AddNewCategoryForm";
 
 export default function AddNewCategoryModal() {
   return (
@@ -8,7 +9,7 @@ export default function AddNewCategoryModal() {
         <Button> Add New Category </Button>
       </Modal.Open>
       <Modal.Window windowName={"AddNewCategoryModal"}>
-        <div>ggggggg</div>
+        <AddNewCategoryForm />
       </Modal.Window>
     </Modal>
   );

@@ -50,10 +50,10 @@ function Window({ children, windowName }) {
           <button
             aria-label={t("general.close")}
             title={t("general.close")}
-            onClick={close}
+            onClick={closeModal}
             className={`absolute ${
               i18n.language === "ar" ? "left-[10px]" : "right-[10px]"
-            } top-[10px] text-red-500`}
+            } top-[10px] text-red-500 cursor-pointer`}
           >
             <FaTimes size={25} />
           </button>
