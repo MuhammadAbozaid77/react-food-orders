@@ -9,7 +9,9 @@ export default function AdminLayout() {
         <AdminSideBar />
         <main className="bg-[#f8f9fc] w-[100%]">
           <AdminLayoutHeader />
-          <Outlet />
+          <div className="p-5">
+            <Outlet />
+          </div>
         </main>
       </div>
     </>

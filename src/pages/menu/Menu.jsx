@@ -1,3 +1,9 @@
+import Wrapper from "../../components/ui/Wrapper";
+
 export default function Menu() {
-  return <div>Menu</div>;
+  return (
+    <Wrapper>
+      <div>Menu</div>
+    </Wrapper>
+  );
 }
