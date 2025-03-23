@@ -5,6 +5,10 @@ import Menu from "../pages/menu/Menu";
 import PageNotFound from "./PageNotFound";
 import CheckOrder from "../pages/admin/check-order/CheckOrder";
 import AdminLayout from "../layouts/AdminLayout";
+import MenuCategory from "../pages/admin/products/MenuCategory";
+import Products from "../pages/admin/products/Products";
+import AdminDashbord from "../pages/admin/dashbord/AdminDashbord";
+import Messages from "../pages/admin/messages/Messages";
 
 export default function Navigations() {
   return (
@@ -20,7 +24,11 @@ export default function Navigations() {
           <Route path="/menu" element={<Menu />} />
         </Route>
         <Route element={<AdminLayout />}>
+          <Route path="/dashbord" element={<AdminDashbord />} />
           <Route path="/check-order" element={<CheckOrder />} />
+          <Route path="/menu-category" element={<MenuCategory />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/messages" element={<Messages />} />
         </Route>
       </Routes>
     </>

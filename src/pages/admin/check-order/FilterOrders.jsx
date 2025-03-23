@@ -10,7 +10,7 @@ export default function FilterOrders() {
 
   return (
     <>
-      <div className="p-5 gap-1 flex">
+      <div className="gap-1 flex">
         <Button onClick={() => handelCick("all")} color={"red"}>
           All
         </Button>
