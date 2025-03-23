@@ -6,7 +6,7 @@ export default function AdminSideBar() {
   return (
     <div className="bg-white lg:w-[350px] h-[100%] md:block hidden">
       <Logo />
-      <ul className="py-2 px-[30px] flex flex-col gap-1">
+      <ul className="py-2 px-[30px] mt-[25px] flex flex-col gap-1">
         {sideBarNavData?.map((el, index) => (
           <li
             key={index}
