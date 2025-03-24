@@ -2,7 +2,7 @@ import Button from "../../../components/ui/Button";
 import Modal from "../../../components/ui/Modal";
 import AddNewCategoryForm from "./AddNewCategoryForm";
 
-export default function AddNewCategoryModal() {
+export default function AddNewCategoryModal({onCloseModal}) {
   return (
     <Modal>
       <Modal.Open openName={"AddNewCategoryModal"}>
