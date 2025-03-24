@@ -1,4 +1,4 @@
-export default function Input({ label, name, type, placeholder }) {
+export default function Input({ label, name, type, placeholder, error }) {
   //   if (type === "file") {
   //     return "";
   //   }
@@ -14,6 +14,7 @@ export default function Input({ label, name, type, placeholder }) {
         placeholder={placeholder}
         id=""
       />
+      <span className="text-red-500 font-semibold text-[14px]">{error}</span>
     </div>
   );
 }

@@ -5,7 +5,8 @@ import Input from "../../../components/ui/Input";
 import GridContainer from "../../../components/ui/GridContainer";
 import { t } from "i18next";
 export default function AddNewCategoryForm() {
-  const { handleSubmit, register } = useForm();
+  const { handleSubmit, register, formState } = useForm();
+  const { errors } = formState;
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
@@ -19,14 +20,23 @@ export default function AddNewCategoryForm() {
           <Input
             label={"categoryNameArabic"}
             type="text"
-            {...register("categoryNameArabic")}
+            {...register("categoryNameArabic", { required: "ffffff" })}
             placeholder={"placeholder"}
+            error={errors?.categoryNameArabic?.message}
           />
           <Input
             label={"categoryNameEnglish"}
             type="text"
-            {...register("categoryNameEnglish")}
+            {...register("categoryNameEnglish", {
+              pattern: { value: "", message: "" },
+              validate: (fieldValue) => {
+                if (fieldValue !== "Muhammad") {
+                  return "NOOOOOOOO";
+                }
+              },
+            })}
             placeholder={"placeholder"}
+            error={errors?.categoryNameEnglish?.message}
           />
         </GridContainer>
         <Input label={"image"} type="file" />
