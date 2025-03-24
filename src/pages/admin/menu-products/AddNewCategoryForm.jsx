@@ -3,6 +3,7 @@ import FormLayout from "././../../../components/ui/FormLayout";
 import Button from "../../../components/ui/Button";
 import Input from "../../../components/ui/Input";
 import GridContainer from "../../../components/ui/GridContainer";
+import { t } from "i18next";
 export default function AddNewCategoryForm() {
   const { handleSubmit, register } = useForm();
 
@@ -12,7 +13,7 @@ export default function AddNewCategoryForm() {
 
   return (
     <FormLayout onSubmit={handleSubmit(onSubmit)}>
-      <FormLayout.Header>Add New Category </FormLayout.Header>
+      <FormLayout.Header> {t("menu.addNewCategory")} </FormLayout.Header>
       <FormLayout.Body>
         <GridContainer>
           <Input

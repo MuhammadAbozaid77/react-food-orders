@@ -1,3 +1,6 @@
 {
-  "one": "Welcome to React and react-i18next"
+  "one": "Welcome to React and react-i18next",
+  "menu": {
+    "addNewCategory": "Add New Category"
+  }
 }
