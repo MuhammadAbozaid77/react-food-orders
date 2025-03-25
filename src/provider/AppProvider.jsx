@@ -4,13 +4,10 @@ import ReactRouterDomProvider from "./ReactRouterDomProvider";
 import "./../i18n";
 
 export default function AppProvider() {
-
-    
-
   return (
     <ReactQueryProvider>
       <ReactRouterDomProvider>
-        <Navigations />
+      <Navigations />
       </ReactRouterDomProvider>
     </ReactQueryProvider>
   );

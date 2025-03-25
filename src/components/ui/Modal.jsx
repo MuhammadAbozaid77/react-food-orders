@@ -57,7 +57,7 @@ function Window({ children, windowName }) {
           >
             <FaTimes size={25} />
           </button>
-          <div>{cloneElement(children, { onCloseModal: closeModal })}</div>
+          <div>{cloneElement(children, { closeModal })}</div>
         </div>
       </div>
     </div>,
