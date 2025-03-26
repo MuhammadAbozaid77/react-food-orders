@@ -1,4 +1,4 @@
-import Wrapper from "../../components/ui/Wrapper";
+import Wrapper from "../../../components/ui/Wrapper";
 
 export default function Menu() {
   return (

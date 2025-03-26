@@ -1,9 +1,8 @@
+import Wrapper from "../ui/Wrapper";
 import Navbar from "./Navbar";
 
 export default function Header() {
   return (
-    <div>
       <Navbar />
-    </div>
   );
 }
