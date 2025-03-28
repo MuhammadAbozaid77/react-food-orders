@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import { sideBarNavData } from "../../utils/AdminLinksIcons.jsx";
+import { NavLink } from "react-router-dom";
 
 export default function AdminSideBar() {
   return (
@@ -20,9 +20,6 @@ export default function AdminSideBar() {
             >
               <span>{el?.icon}</span>
               <span>{el?.name}</span>
-              {({ isActive }) =>
-                isActive && <span className="text-red-500"> ●</span>
-              }
             </NavLink>
           </li>
         ))}

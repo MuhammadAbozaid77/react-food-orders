@@ -4,20 +4,29 @@ import Button from "../../../components/ui/Button";
 import { t } from "i18next";
 import CustomInput from "../../../components/ui/CustomInput";
 import CustomSelect from "../../../components/ui/CustomSelect";
+import useAddNewOrder from "./../../../hooks/useAddNewOrder";
 
-export default function AddNewCategoryForm() {
+export default function AddNewCategoryForm({ dataToEdit, idToEdit }) {
+  const isEditingModal = Boolean(idToEdit);
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors },
+    getValues,
   } = useForm({
-    defaultValues: {
-      username: "",
-    },
+    defaultValues: isEditingModal ? dataToEdit : {},
   });
 
+  const { mutate } = useAddNewOrder("oooo");
+
   const onSubmit = (data) => {
-    console.log("Form Data:", data); // ✅ Check if this logs data
+    const ddd = data.imageFile[0];
+    mutate({ data, id2: "gggggggg" });
+  };
+
+  const onError = (data) => {
+    console.log("Errors : ", data); // ✅ Check if this logs data
   };
 
   const options = [
@@ -27,21 +36,32 @@ export default function AddNewCategoryForm() {
   ];
 
   return (
-    <FormLayout onSubmit={handleSubmit(onSubmit)}>
+    <FormLayout onSubmit={handleSubmit(onSubmit, onError)}>
       <FormLayout.Header> {t("menu.addNewCategory")} </FormLayout.Header>
       <FormLayout.Body>
-        {/* <CustomInput
-          label="Username"
+        <CustomInput
+          label="userName"
           type="text"
-          {...register("username", { required: "Username is required" })}
-          error={errors.username?.message}
+          {...register("userName", {
+            required: "userName is required",
+          })}
+          error={errors.userName?.message}
         />
         <CustomInput
-          label="username2"
-          type="password"
-          {...register("username2", { required: "Username is required" })}
-          error={errors.username2?.message}
-        /> */}
+          label="salary"
+          type="number"
+          {...register("salary", { required: "Username is required" })}
+          error={errors.salary?.message}
+        />
+        <CustomInput
+          accept="image/*"
+          label="imageFile"
+          type="file"
+          {...register("imageFile", {
+            required: isEditingModal ? false : "Username is required",
+          })}
+          error={errors.imageFile?.message}
+        />
         <CustomSelect
           label="Category"
           options={[
@@ -54,7 +74,7 @@ export default function AddNewCategoryForm() {
         />
       </FormLayout.Body>
       <FormLayout.Footer>
-        <Button type="submit">Submit</Button>
+        <Button type="submit"> {isEditingModal ? "Edit" : "Submit"} </Button>
       </FormLayout.Footer>
     </FormLayout>
   );
