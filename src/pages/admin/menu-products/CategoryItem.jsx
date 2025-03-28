@@ -1,4 +1,6 @@
 export default function CategoryItem({ item }) {
+
+  
   return (
     <div className="">
       <div className=" border-gray-400 w-[150px] bg-gray-200  h-[200px]  rounded-[30px] border duration-150 flex flex-col items-center justify-between overflow-hidden cursor-pointer">

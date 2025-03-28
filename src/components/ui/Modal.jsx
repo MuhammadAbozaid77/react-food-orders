@@ -31,7 +31,7 @@ function Open({ children, openName }) {
 function Window({ children, windowName }) {
   const { t, i18n } = useTranslation();
 
-  const { modalName, closeModal } = useContext(ModalContext);
+  const { modalName, closeModal: onCloseModal } = useContext(ModalContext);
 
   if (windowName !== modalName) {
     return null;
@@ -50,14 +50,14 @@ function Window({ children, windowName }) {
           <button
             aria-label={t("general.close")}
             title={t("general.close")}
-            onClick={closeModal}
+            onClick={onCloseModal}
             className={`absolute ${
               i18n.language === "ar" ? "left-[20px]" : "right-[20px]"
             } top-[10px] text-red-500 cursor-pointer`}
           >
             <FaTimes size={25} />
           </button>
-          <div>{cloneElement(children, { closeModal })}</div>
+          <div>{cloneElement(children, { onCloseModal })}</div>
         </div>
       </div>
     </div>,
