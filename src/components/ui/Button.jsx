@@ -9,6 +9,7 @@ export default function Button({
   style,
   type,
   icon,
+  active,
 }) {
   const iconType = icon === "add" ? <MdAddToPhotos size={25} /> : "";
   return (
@@ -16,10 +17,10 @@ export default function Button({
       disabled={disabled}
       onClick={onClick}
       type={type}
-      className={`flex justify-between text-[18px] items-center border px-3 py-2 rounded-[5px] border-transparent bg-red-700 hover:bg-red-600  transition-all duration-300 text-white font-semibold cursor-pointer ${style}`}
+      className={`disabled:cursor-not-allowed text-center text-[18px]  py-1 px-2 rounded-[5px] capitalize  transition-all duration-150 font-semibold cursor-pointer  ${style} ${active}`}
     >
       <span>{children}</span>
-      <span className="text-white mx-2">{iconType}</span>
+      {iconType && <span className="text-white mx-2">{iconType}</span>}
     </button>
   );
 }

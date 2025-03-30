@@ -26,7 +26,7 @@ export default function Navigations() {
           <Route path="/order-cart" element={<OrderCart />} />
         </Route>
         <Route element={<AdminLayout />}>
-          {/* <Route path="/dashbord" element={<AdminDashbord />} /> */}
+          <Route path="/dashbord" element={<AdminDashbord />} />
           <Route path="/check-order" element={<CheckOrder />} />
           <Route path="/menu-category" element={<MenuCategory />} />
           <Route path="/products" element={<Products />} />
