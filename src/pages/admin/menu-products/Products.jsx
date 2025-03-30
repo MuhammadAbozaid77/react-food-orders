@@ -6,7 +6,9 @@ import ProductsFilter from "./ProductsFilter";
 export default function Products() {
   return (
     <>
-      <Wrapper>  <ProductsFilter/> </Wrapper>
+      <Wrapper>
+        <ProductsFilter />
+      </Wrapper>
       <Wrapper>
         <div className="flex gap-3 flex-wrap lg:justify-start justify-center mt-[30px]">
           {productsJson?.map((item, index) => (

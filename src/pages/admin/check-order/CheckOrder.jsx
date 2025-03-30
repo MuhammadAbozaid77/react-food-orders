@@ -1,12 +1,18 @@
+import HeaderContent from "../../../components/ui/HeaderContent";
 import Wrapper from "../../../components/ui/Wrapper";
-import FilterOrders from "./FilterOrders";
 import OrdersTable from "./OrdersTable";
+import OrderTableOperations from "./OrderTableOperations";
 
 export default function CheckOrder() {
   return (
-    <Wrapper>
-      <FilterOrders />
-      <OrdersTable />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <HeaderContent>Check Orders</HeaderContent>
+      </Wrapper>
+      <Wrapper>
+        <OrderTableOperations />
+        <OrdersTable />
+      </Wrapper>
+    </>
   );
 }
