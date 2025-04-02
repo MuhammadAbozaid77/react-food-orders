@@ -1,6 +1,4 @@
 import { IoMdAdd } from "react-icons/io";
-import { MdOutlineAddBox } from "react-icons/md";
-import { MdAddToPhotos } from "react-icons/md";
 
 export default function Button({
   children,
@@ -8,19 +6,23 @@ export default function Button({
   onClick,
   style,
   type,
-  icon,
   active,
 }) {
-  const iconType = icon === "add" ? <MdAddToPhotos size={25} /> : "";
+  const iconType = type === "add" ? <IoMdAdd size={25} /> : "";
+
+  const typeStyle =
+    type === "submit"
+      ? `bg-mainBackColor w-full py-[20px] text-white text-[20px] disabled:bg-orange-200 ${style}`
+      : "bg-gray-600  hover:bg-gray-500 hover:text-white text-gray-200";
   return (
     <button
       disabled={disabled}
       onClick={onClick}
       type={type}
-      className={`disabled:cursor-not-allowed text-center text-[18px]  py-1 px-2 rounded-[5px] capitalize  transition-all duration-150 font-semibold cursor-pointer  ${style} ${active}`}
+      className={`flex justify-center items-center disabled:cursor-not-allowed text-center text-[18px]  py-2 px-5 rounded-[10px] capitalize  transition-all duration-150 font-semibold cursor-pointer  ${typeStyle} ${active}`}
     >
       <span>{children}</span>
-      {iconType && <span className="text-white mx-2">{iconType}</span>}
+      {iconType && <span className=" mx-2">{iconType}</span>}
     </button>
   );
 }

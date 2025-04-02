@@ -8,14 +8,14 @@ export default function FormLayout({ children, onSubmit }) {
 
 function FormHeader({ children }) {
   return (
-    <div className="text-[30px] font-bold bg-red-700 rounded-[15px] text-white p-5 ">
+    <div className="text-[25px] font-bold  rounded-[10px] text-mainTextColor py-5">
       {children}
     </div>
   );
 }
 
 function FormBody({ children }) {
-  return <div className="py-[20px]">{children}</div>;
+  return <div className="py-[10px]">{children}</div>;
 }
 
 function FormFooter({ children }) {

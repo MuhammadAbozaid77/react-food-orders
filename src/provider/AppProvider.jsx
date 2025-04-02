@@ -3,7 +3,15 @@ import ReactQueryProvider from "./ReactQueryProvider";
 import ReactRouterDomProvider from "./ReactRouterDomProvider";
 import "./../i18n";
 import { Toaster } from "react-hot-toast";
+import { useTranslation } from "react-i18next";
+import { useEffect } from 'react';
 export default function AppProvider() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+  }, [i18n.language]);
   return (
     <ReactQueryProvider>
       <ReactRouterDomProvider>
@@ -23,7 +31,7 @@ export default function AppProvider() {
           style: {
             maxWidth: "500px",
             fontSize: "16px",
-            padding : "5px 10px"
+            padding: "5px 10px",
           },
         }}
       />

@@ -14,7 +14,7 @@ export default function AddNewCategoryModal() {
   return (
     <Modal>
       <Modal.Open openName={"AddEditCategoryModal"}>
-        <Button icon={"add"}> Add New Category </Button>
+        <Button type={"add"}> Add New Category </Button>
       </Modal.Open>
       <Modal.Window windowName={"AddEditCategoryModal"}>
         <div className="flex justify-center items-center">

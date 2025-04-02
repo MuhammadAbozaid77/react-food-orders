@@ -15,16 +15,17 @@ const CustomInput = forwardRef(
         <div className="flex justify-center items-start flex-col mt-[10px]">
           <label
             htmlFor={name}
-            className="capitalize mb-1 font-bold text-gray-600"
+            className="capitalize mb-1 font-semibold  text-gray-600"
           >
             {label}
           </label>
           <div className=" p-1 border w-[100%] flex  justify-between items-center rounded-[10px] shadow  border-gray-400 text-[18px]">
             <input
               ref={ref}
-              className="w-[100%] p-2  focus:outline-none"
+              className="w-[100%] p-2  focus:outline-none disabled:cursor-not-allowed"
               type={type}
               name={name}
+              disabled={disabled}
               placeholder={placeholder}
               id={name}
               {...rest} // ✅ Ensure all props from `register` are passed
@@ -48,14 +49,14 @@ const CustomInput = forwardRef(
           <div className="flex justify-center items-start flex-col mt-[10px]">
             <label
               htmlFor={name}
-              className="capitalize mb-1 font-bold text-gray-600"
+              className="capitalize mb-1 font-semibold text-gray-600"
             >
               {label}
             </label>
             <div className=" p-1 border w-[100%] flex  justify-between items-center rounded-[10px] shadow  border-gray-400 text-[18px]">
               <input
                 ref={ref}
-                className="w-[100%] p-2  focus:outline-none"
+                className="w-[100%] p-2  focus:outline-none disabled:cursor-not-allowed"
                 type={showPassword ? "text" : "password"} // ✅ Toggle between "password" and "text"
                 name={name}
                 placeholder={placeholder}
@@ -94,16 +95,17 @@ const CustomInput = forwardRef(
       <div className="flex justify-center items-start flex-col mt-[10px]">
         <label
           htmlFor={name}
-          className="capitalize mb-1 font-bold text-gray-600"
+          className="capitalize mb-1 font-semibold text-gray-600"
         >
           {label}
         </label>
         <div className=" p-1 border w-[100%] flex  justify-between items-center rounded-[10px] shadow  border-gray-400 text-[18px]">
           <input
             ref={ref}
-            className="w-[100%] p-2  focus:outline-none"
+            className="w-[100%] p-2  focus:outline-none disabled:cursor-not-allowed"
             type={type}
             name={name}
+            disabled={disabled}
             placeholder={placeholder}
             id={name}
             {...rest} // ✅ Ensure all props from `register` are passed

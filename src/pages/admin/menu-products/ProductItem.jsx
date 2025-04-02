@@ -5,7 +5,7 @@ import SmallMenu from "../../../components/ui/SmallMenu";
 export default function ProductItem({ item }) {
   return (
     <>
-      <div className="w-[240px] border border-gray-300 rounded-[5px] shadow relative">
+      <div className="w-[240px] border border-gray-300 rounded-[10px] shadow relative">
         <div className="h-[250px] p-5">
           <img src={item.pic} alt="" />
         </div>
@@ -20,7 +20,7 @@ export default function ProductItem({ item }) {
           <h1 className="text-[20px] font-bold text-gray-600">{item.name}</h1>
           <div className="flex justify-between items-center">
             <span className="text-[25px] font-bold text-red-600 ">55.55</span>
-            <span className="bg-red-800 text-white p-2 rounded-[5px] hover:bg-red-700 cursor-pointer">
+            <span className="bg-red-800 text-white p-2 rounded-[10px] hover:bg-red-700 cursor-pointer">
               <FaPlus size={16} />
             </span>
           </div>

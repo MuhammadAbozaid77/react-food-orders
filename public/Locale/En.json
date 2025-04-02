@@ -2,5 +2,10 @@
   "one": "Welcome to React and react-i18next",
   "menu": {
     "addNewCategory": "Add New Category"
+  },
+  "login": {
+    "login": "Login To Your Acount",
+    "userEmail": "userEmail",
+    "userPassword": "userPassword"
   }
 }

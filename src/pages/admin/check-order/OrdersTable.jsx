@@ -3,6 +3,7 @@ import { orders } from "../../../data/data";
 import Table from "../../../components/ui/Table";
 import OrdersTableRow from "./OrdersTableRow";
 import EmptyTable from "../../../components/ui/EmptyTable";
+import Pagination from "../../../components/ui/Pagination";
 
 export default function OrdersTable() {
   const [searchParams] = useSearchParams();
@@ -35,6 +36,7 @@ export default function OrdersTable() {
   //   (a, b) => (a[field] - b[field]) * modifier
   // );
 
+  const count = 50;
   const headRow = [
     { colName: "name" },
     { colName: "history" },
@@ -48,16 +50,6 @@ export default function OrdersTable() {
   }
   return (
     <>
-      {/* {sortedData &&
-        sortedData?.map((el, index) => (
-          <div
-            className="border p-2 bg-gray-100 font-semibold capitalize text-[20px] mb-1 rounded-md "
-            key={index}
-          >
-            {el.company}
-          </div>
-        ))} */}
-
       <Table>
         <Table.Header>
           <Table.Row>
@@ -71,6 +63,9 @@ export default function OrdersTable() {
             <OrdersTableRow key={index} row={el} />
           ))}
         </Table.Body>
+        <Table.Footer>
+          <Pagination count={count} />
+        </Table.Footer>
       </Table>
     </>
   );

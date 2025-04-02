@@ -3,5 +3,10 @@
 
   "menu": {
     "addNewCategory": "إضافة تصنيف جديد"
+  },
+  "login": {
+    "login": "تسجيل الدخول إلى حسابك",
+    "userEmail": "إيميل المستخدم",
+    "userPassword": "الرقم السري"
   }
 }

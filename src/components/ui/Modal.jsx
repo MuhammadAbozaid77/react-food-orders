@@ -45,7 +45,7 @@ function Window({ children, windowName }) {
 
       <div className="fixed left-0 top-0 z-[1000] h-full w-full">
         <div
-          className={`p-[50px] fixed left-[50%] top-[50%] z-50 max-h-[80vh] w-[90%] translate-x-[-50%] translate-y-[-50%] overflow-auto rounded-[30px] bg-white shadow-md md:w-[750px]`}
+          className={`p-[50px] fixed left-[50%] top-[50%] z-50 max-h-[80vh] w-[90%] translate-x-[-50%] translate-y-[-50%] overflow-y-auto rounded-[20px] bg-white shadow-md md:w-[750px]`}
         >
           <button
             aria-label={t("general.close")}

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import AdminSideBar from "../components/layout/AdminSideBar";
-import AdminLayoutHeader from "../components/layout/AdminLayoutHeader";
+import AdminSideBar from "../../components/layout/AdminSideBar";
+import AdminLayoutHeader from "../../components/layout/AdminLayoutHeader";
 import { useState } from "react";
 
 export default function AdminLayout() {
@@ -8,7 +8,7 @@ export default function AdminLayout() {
 
   return (
     <>
-      <div className="flex h-[100vh] overflow-hidden relative ">
+      <div className="flex h-[100vh]  relative ">
         {!sideBarStatus ? (
           <AdminSideBar className="bg-white min-w-[250px] h-[100%] lg:block hidden" />
         ) : (

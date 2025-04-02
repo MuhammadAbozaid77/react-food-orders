@@ -19,7 +19,7 @@ export default function PageNotFound() {
             </p>
             <Link
               to="/"
-              className="duration-150 border inline-flex text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-gray-900 my-4"
+              className="duration-150 border inline-flex text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-[10px] text-sm px-5 py-2.5 text-center dark:focus:ring-gray-900 my-4"
             >
               Back to Homepage
             </Link>
