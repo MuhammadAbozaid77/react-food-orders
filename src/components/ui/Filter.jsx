@@ -12,7 +12,7 @@ export default function Filter({ filteredField, options }) {
   const currentButton = searchParams.get(filteredField) || options?.[0].value;
 
   return (
-    <div className="gap-1 flex  border border-gray-300 h-[50px] p-1 rounded">
+    <div className="gap-1 flex  border border-gray-300 h-[50px] p-1 rounded-[10px]">
       {options?.map((el, index) => (
         <Button
           key={index}

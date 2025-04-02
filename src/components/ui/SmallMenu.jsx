@@ -40,7 +40,7 @@ function Toggle({ name }) {
 
   return (
     <div
-      className=" bg-gray-200 cursor-pointer p-1 m-1 rounded-md  absolute top-[5px] right-[5px]"
+      className=" bg-gray-200 cursor-pointer p-1 m-1 rounded-[10px]  absolute top-[5px] right-[5px]"
       onClick={(e) => handelClick(e)}
     >
       <CiMenuKebab size={25} />

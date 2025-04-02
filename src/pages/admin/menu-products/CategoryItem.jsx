@@ -3,7 +3,7 @@ export default function CategoryItem({ item }) {
   
   return (
     <div className="">
-      <div className=" border-gray-400 w-[150px] bg-gray-200  h-[200px]  rounded-[30px] border duration-150 flex flex-col items-center justify-between overflow-hidden cursor-pointer">
+      <div className=" border-gray-400 w-[150px] bg-gray-200  h-[200px]  rounded-[10px] border duration-150 flex flex-col items-center justify-between overflow-hidden cursor-pointer">
         {/* Image Container */}
         <div className="h-[150px] flex justify-center items-center">
           <img src={item.pic} alt="" className="h-[100%] p-3 object-contain" />

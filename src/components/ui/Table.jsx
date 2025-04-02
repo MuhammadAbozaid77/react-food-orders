@@ -1,35 +1,45 @@
 export default function Table({ children }) {
   return (
-    <div className="w-full overflow-x-auto rounded-tl-[12px] rounded-tr-[12px]  text-primary shadow-md">
-      <table className="w-full text-center text-sm bg-white">{children}</table>
+    <div className="w-full overflow-x-auto  overflow-y-hidden rounded-tl-[10px] rounded-tr-[10px]  text-primary shadow-md">
+      <div role="table" className="text-center text-sm bg-white w-full">
+        {children}
+      </div>
     </div>
   );
 }
 
 function TableHeader({ children }) {
-  return <thead className="bg-red-700">{children}</thead>;
+  return <div className="bg-red-700">{children}</div>;
 }
 
 function TableHead({ children }) {
-  return <th className="p-4 text-[20px] capitalize text-white">{children}</th>;
+  return (
+    <div className="p-4 text-[18px]  w-full text-center capitalize text-white">
+      {children}
+    </div>
+  );
 }
 
 /* ------------------------------------------------------------ */
 function TableBody({ children }) {
-  return <tbody>{children}</tbody>;
+  return <div>{children}</div>;
 }
 
 function TableRow({ children }) {
-  return <tr className=" odd:bg-transparent even:bg-gray-200">{children}</tr>;
+  return (
+    <div className=" odd:bg-transparent even:bg-gray-200 flex justify-between items-center w-full">
+      {children}
+    </div>
+  );
 }
 
 function TableCell({ children }) {
-  return <td className="p-4">{children}</td>;
+  return <div className="p-4 w-[100%]">{children}</div>;
 }
 
 /* ------------------------------------------------------------ */
 function TableFooter({ children }) {
-  return <tfoot>{children}</tfoot>;
+  return <div className=" w-full p-5">{children}</div>;
 }
 
 /* ------------------------------------------------------------ */

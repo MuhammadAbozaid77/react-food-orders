@@ -5,6 +5,7 @@ import { t } from "i18next";
 import CustomInput from "../../../components/ui/CustomInput";
 import CustomSelect from "../../../components/ui/CustomSelect";
 import useAddNewOrder from "./../../../hooks/useAddNewOrder";
+import Spinner from "./../../../components/ui/Spinner";
 
 export default function AddNewCategoryForm({ dataToEdit, idToEdit }) {
   const isEditingModal = Boolean(idToEdit);
@@ -18,7 +19,7 @@ export default function AddNewCategoryForm({ dataToEdit, idToEdit }) {
     defaultValues: isEditingModal ? dataToEdit : {},
   });
 
-  const { mutate } = useAddNewOrder("oooo");
+  const { mutate, isPending } = useAddNewOrder("oooo");
 
   const onSubmit = (data) => {
     const ddd = data.imageFile[0];
@@ -74,7 +75,10 @@ export default function AddNewCategoryForm({ dataToEdit, idToEdit }) {
         />
       </FormLayout.Body>
       <FormLayout.Footer>
-        <Button type="submit"> {isEditingModal ? "Edit" : "Submit"} </Button>
+        <Button type="submit">
+          {isPending ? <Spinner size={""} /> : ""}{" "}
+          {isEditingModal ? "Edit" : "Submit"}
+        </Button>
       </FormLayout.Footer>
     </FormLayout>
   );
