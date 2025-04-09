@@ -1,4 +1,5 @@
 import { CiMenuBurger } from "react-icons/ci";
+import AdminLogout from "./../../pages/admin/auth/AdminLogout";
 
 export default function AdminLayoutHeader({ setSideBarStatus }) {
   const handelButtonClick = () => {
@@ -10,7 +11,7 @@ export default function AdminLayoutHeader({ setSideBarStatus }) {
       <div className="" onClick={handelButtonClick}>
         <CiMenuBurger size={25} className="cursor-pointer" />
       </div>
-      <div></div>
+      <AdminLogout />
     </div>
   );
 }

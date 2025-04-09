@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React from "react";
 import toast from "react-hot-toast";
-import { addNewOrderFun } from "./../services/dataAPi";
+import { addNewOrderFun } from "../services/api/dataAPi";
 
 export default function useAddNewOrder() {
   const queryClient = useQueryClient();

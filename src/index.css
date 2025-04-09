@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-mainBackColor: #ee4e2c;
+  --color-mainBackColor: oklch(57.7% 0.245 27.325);
   --color-mainTextColor: oklch(0.446 0.03 256.802);
 }
 

@@ -1,10 +1,10 @@
-import { Fragment } from "react";
 import AppProvider from "./provider/AppProvider";
-
+import { Provider } from "react-redux";
+import storeRedux from "./store/store";
 export default function App() {
   return (
-    <Fragment>
+    <Provider store={storeRedux}>
       <AppProvider />
-    </Fragment>
+    </Provider>
   );
 }
