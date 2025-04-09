@@ -14,7 +14,7 @@ export default function AdminSideBar({ className }) {
           >
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-3 ${isActive ? "text-orange-500" : ""}`
+                `flex items-center gap-3 ${isActive ? "text-red-500" : ""}`
               }
               to={el.href}
             >

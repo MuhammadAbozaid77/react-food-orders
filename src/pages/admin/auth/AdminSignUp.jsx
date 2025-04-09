@@ -6,12 +6,13 @@ import Button from "./../../../components/ui/Button";
 import logoImage from "./../../../assets/logo0.png";
 import Spinner from "./../../../components/ui/Spinner";
 import useLogin from "../../../hooks/admin-hooks/useLogin";
-export default function AdminLogin() {
+export default function AdminSignUp() {
   const { t } = useTranslation();
   const { login, isPending } = useLogin();
   const {
     handleSubmit,
     register,
+    getValues,
     formState: { errors },
   } = useForm();
 
@@ -55,6 +56,18 @@ export default function AdminLogin() {
           error={errors.userPassword?.message}
           disabled={isPending}
         />
+        <CustomInput
+          label={t("login.passwordConfirm")}
+          type="password"
+          {...register("passwordConfirm", {
+            required: "This field is required",
+            validate: (value) =>
+              value === getValues().userPassword || "Passwords need to match",
+          })}
+          error={errors.passwordConfirm?.message}
+          disabled={isPending}
+        />
+
         <div className="my-[20px]">
           {/* <Button
             style={"bg-mainBackColor w-full py-[20px] text-white text-[20px]"}

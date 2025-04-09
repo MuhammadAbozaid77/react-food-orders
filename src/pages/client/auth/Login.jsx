@@ -5,10 +5,10 @@ import HeaderContent from "../../../components/ui/HeaderContent";
 import Button from "./../../../components/ui/Button";
 import logoImage from "./../../../assets/logo0.png";
 import Spinner from "./../../../components/ui/Spinner";
-import useLogin from "../../../hooks/admin-hooks/useLogin";
-export default function AdminLogin() {
+import useUserLogin from "./../../../hooks/user-hooks/useUserLogin";
+export default function Login() {
   const { t } = useTranslation();
-  const { login, isPending } = useLogin();
+  const { login, isPending } = useUserLogin();
   const {
     handleSubmit,
     register,
@@ -56,13 +56,6 @@ export default function AdminLogin() {
           disabled={isPending}
         />
         <div className="my-[20px]">
-          {/* <Button
-            style={"bg-mainBackColor w-full py-[20px] text-white text-[20px]"}
-            type="submit"
-          >
-            {t("Submit")}
-          </Button> */}
-
           <Button type="submit" disabled={isPending}>
             <span>
               {isPending ? <Spinner size={""} disabled={isPending} /> : ""}

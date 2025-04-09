@@ -12,6 +12,10 @@ import Layout from "./layouts/Layout";
 import AdminLayout from "./layouts/AdminLayout";
 import AuthLayout from "./layouts/AuthLayout";
 import AdminLogin from "../pages/admin/auth/AdminLogin";
+import AdminProtectedRouting from "./layouts/AdminProtectedRouting";
+import AdminSignUp from "../pages/admin/auth/AdminSignUp";
+import ProtectedRouting from "./layouts/ProtectedRouting";
+import Login from "../pages/client/auth/Login";
 
 export default function Navigations() {
   return (
@@ -22,16 +26,30 @@ export default function Navigations() {
         {/* <Route index element={<Navigate replace to="home" />} />
           <Route path="home" element={<Home />} /> */}
 
-        <Route element={<Layout />}>
+        <Route
+          element={
+            <ProtectedRouting>
+              <Layout />
+            </ProtectedRouting>
+          }
+        >
           <Route index element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/order-cart" element={<OrderCart />} />
         </Route>
         <Route element={<AuthLayout />}>
           {/* <Route index element={<Home />} /> */}
+          <Route path="/login" element={<Login />} />
           <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin-signUp" element={<AdminSignUp />} />
         </Route>
-        <Route element={<AdminLayout />}>
+        <Route
+          element={
+            <AdminProtectedRouting>
+              <AdminLayout />
+            </AdminProtectedRouting>
+          }
+        >
           <Route path="/dashbord" element={<AdminDashbord />} />
           <Route path="/check-order" element={<CheckOrder />} />
           <Route path="/menu-category" element={<MenuCategory />} />

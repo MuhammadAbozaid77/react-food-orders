@@ -1,12 +1,9 @@
-export const addNewOrderFun = (data) => {
-  console.log("From Mutation", data);
-};
-
-export async function loginAPI(arg) {
+export async function userLogin(arg) {
   console.log("Login API called with:", arg);
 
   // Simulating delay
   await new Promise((resolve) => setTimeout(resolve, 3000));
+  localStorage.setItem("userData", "muhammad");
 
   console.log("Processing completed");
   return [{ successful: "successful" }];
