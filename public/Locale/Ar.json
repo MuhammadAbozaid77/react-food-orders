@@ -5,8 +5,10 @@
     "addNewCategory": "إضافة تصنيف جديد"
   },
   "login": {
-    "login": "تسجيل الدخول إلى حسابك",
-    "userEmail": "إيميل المستخدم",
-    "userPassword": "الرقم السري"
+    "login": "تسجيل الدخول",
+    "userEmail": "البريد الالكتروني",
+    "userPassword": "الرقم السري",
+    "loginWithGoogle": "تسجيل الدخول باستخدام جوجل",
+    "loginWithFaceBook": "تسجيل الدخول باستخدام فيس بوك"
   }
 }

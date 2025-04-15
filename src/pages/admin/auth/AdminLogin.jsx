@@ -55,21 +55,6 @@ export default function AdminLogin() {
           error={errors.userPassword?.message}
           disabled={isPending}
         />
-        <div className="my-[20px]">
-          {/* <Button
-            style={"bg-mainBackColor w-full py-[20px] text-white text-[20px]"}
-            type="submit"
-          >
-            {t("Submit")}
-          </Button> */}
-
-          <Button type="submit" disabled={isPending}>
-            <span>
-              {isPending ? <Spinner size={""} disabled={isPending} /> : ""}
-            </span>
-            {isPending ? "" : "Submit"}
-          </Button>
-        </div>
       </form>
     </div>
   );

@@ -6,6 +6,8 @@
   "login": {
     "login": "Login To Your Acount",
     "userEmail": "userEmail",
-    "userPassword": "userPassword"
+    "userPassword": "userPassword",
+    "loginWithGoogle": "Login With Google",
+    "loginWithFaceBook": "Login With FaceBook"
   }
 }
