@@ -21,7 +21,7 @@ export default function Login() {
   };
 
   return (
-    <div className="lg:w-[500px] w-full  border border-gray-300 shadow rounded-[10px] bg-white">
+    <div className="lg:w-[500px] w-full  border border-gray-300 shadow rounded-[10px] ">
       <div className="p-5 flex justify-center items-center ">
         <img className="md:w-[180px] w-[150px]" src={logoImage} alt="" />
       </div>

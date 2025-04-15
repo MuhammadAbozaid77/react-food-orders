@@ -10,7 +10,7 @@ export default function Products() {
         <ProductsFilter />
       </Wrapper>
       <Wrapper>
-        <div className="flex gap-3 flex-wrap lg:justify-start justify-center mt-[30px]">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {productsJson?.map((item, index) => (
             <ProductItem item={item} key={index} />
           ))}

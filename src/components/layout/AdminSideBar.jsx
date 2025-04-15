@@ -14,7 +14,7 @@ export default function AdminSideBar({ className }) {
           >
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-3 ${isActive ? "text-red-500" : ""}`
+                `flex items-center gap-3 ${isActive ? "text-red-500 " : ""}`
               }
               to={el.href}
             >
@@ -27,3 +27,33 @@ export default function AdminSideBar({ className }) {
     </div>
   );
 }
+
+// import Logo from "./Logo";
+// import { sideBarNavData } from "../../utils/AdminLinksIcons.jsx";
+// import { NavLink } from "react-router-dom";
+
+// export default function AdminSideBar({ className }) {
+//   return (
+//     <div className={className}>
+//       <Logo />
+//       <ul className="py-2 mt-[25px] flex flex-col">
+//         {sideBarNavData?.map((el, index) => (
+//           <li
+//             key={index}
+//             className="p-1 text-gray-500 font-semibold text-[20px] capitalize "
+//           >
+//             <NavLink
+//               className={({ isActive }) =>
+//                 `flex items-center gap-3 ${isActive ? "bg-gray-600 text-white  rounded-md p-2" : "p-2"}`
+//               }
+//               to={el.href}
+//             >
+//               <span>{el?.icon}</span>
+//               <span>{el?.name}</span>
+//             </NavLink>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
