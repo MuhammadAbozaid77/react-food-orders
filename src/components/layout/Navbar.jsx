@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
-import Button from "../ui/Button";
 
 export default function Navbar() {
   return (
-    <div className="p-5 flex justify-center items-center gap-1 h-[80px] border-b border-gray-200">
-      <Link to={"/"}>
-        <Button color={"slate"}>Home</Button>
+    <div className="p-5 flex justify-center items-center gap-5 h-[80px] ">
+      <Link className="text-gray-500 font-semibold text-[20px]" to={"/"}>
+        Home
       </Link>
-      <Link to={"/check-order"}>
-        <Button color={"slate"}>Check Order</Button>
+      <Link
+        className="text-gray-500 font-semibold text-[20px]"
+        to={"/check-order"}
+      >
+        Check-Order
       </Link>
     </div>
   );

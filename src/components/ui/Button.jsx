@@ -13,7 +13,7 @@ export default function Button({
   const typeStyle =
     type === "submit"
       ? `bg-mainBackColor w-full py-[20px] text-white text-[20px] disabled:bg-red-300 ${style}`
-      : "bg-gray-600  hover:bg-gray-500 hover:text-white text-gray-200";
+      : "bg-gray-100 hover:bg-gray-200 hover:text-gray-500 text-gray-500";
   return (
     <button
       disabled={disabled}
