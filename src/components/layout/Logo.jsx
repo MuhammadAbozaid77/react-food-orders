@@ -1,7 +1,11 @@
 import logoImage from "./../../assets/logo.png";
-export default function Logo({ style }) {
+export default function Logo({ style, type }) {
   return (
-    <div className={`h-[80px] bg-red-600  flex justify-center items-center  ${style}`}>
+    <div
+      className={`h-[80px]  flex justify-center items-center  ${style} ${
+        type === "admin" ? "bg-red-600" : ""
+      }`}
+    >
       <img className="w-[120px]" src={logoImage} alt="" />
     </div>
   );

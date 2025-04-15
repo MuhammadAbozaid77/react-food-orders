@@ -1,3 +1,7 @@
-export default function Wrapper({ children }) {
-  return <div className="p-5 bg-white my-3 shadow rounded">{children}</div>;
+export default function Wrapper({ children, style }) {
+  return (
+    <div className={`bg-white mb-3 shadow rounded-2xl ${style}`}>
+      {children}
+    </div>
+  );
 }

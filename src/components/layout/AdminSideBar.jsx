@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default function AdminSideBar({ className }) {
   return (
     <div className={className}>
-      <Logo />
+      <Logo type={"admin"} />
       <ul className="py-2 px-[30px] mt-[25px] flex flex-col gap-1">
         {sideBarNavData?.map((el, index) => (
           <li

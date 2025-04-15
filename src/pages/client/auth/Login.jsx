@@ -6,6 +6,8 @@ import Button from "./../../../components/ui/Button";
 import logoImage from "./../../../assets/logo0.png";
 import Spinner from "./../../../components/ui/Spinner";
 import useUserLogin from "./../../../hooks/user-hooks/useUserLogin";
+import { FaFacebook } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 export default function Login() {
   const { t } = useTranslation();
   const { login, isPending } = useUserLogin();
@@ -20,8 +22,10 @@ export default function Login() {
     login({ data });
   };
 
+  const isLoading = false;
+
   return (
-    <div className="lg:w-[500px] w-full  border border-gray-300 shadow rounded-[10px] ">
+    <div className="lg:w-[500px] w-full  border border-gray-300 bg-white shadow rounded-[10px] ">
       <div className="p-5 flex justify-center items-center ">
         <img className="md:w-[180px] w-[150px]" src={logoImage} alt="" />
       </div>
@@ -55,6 +59,38 @@ export default function Login() {
           error={errors.userPassword?.message}
           disabled={isPending}
         />
+
+        <div className="flex flex-col gap-4 mt-[20px]">
+          <Button type="button" disabled={isLoading}>
+            {isLoading ? (
+              <div className="flexCenter">
+                <Spinner />
+              </div>
+            ) : (
+              <div className="flex justify-between items-center gap-1   w-[220px]">
+                {t("login.loginWithGoogle")}
+                <div className="border border-gray-300 shadow  p-1 rounded-lg bg-white">
+                  <FcGoogle size={30} />
+                </div>
+              </div>
+            )}
+          </Button>
+          <Button type="button" disabled={isLoading}>
+            {isLoading ? (
+              <div className="flexCenter">
+                <Spinner />
+              </div>
+            ) : (
+              <div className="flex justify-between items-center   gap-1 w-[220px]">
+                {t("login.loginWithFaceBook")}
+                <div className="border border-gray-300 shadow  p-1 rounded-lg bg-white text-blue-700">
+                  <FaFacebook size={30} />
+                </div>
+              </div>
+            )}
+          </Button>
+        </div>
+
         <div className="my-[20px]">
           <Button type="submit" disabled={isPending}>
             <span>
