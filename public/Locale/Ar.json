@@ -10,5 +10,9 @@
     "userPassword": "الرقم السري",
     "loginWithGoogle": "تسجيل الدخول باستخدام جوجل",
     "loginWithFaceBook": "تسجيل الدخول باستخدام فيس بوك"
+  },
+  "navbar": {
+    "home": "الرئيسية",
+    "menu": "المنتجات"
   }
 }

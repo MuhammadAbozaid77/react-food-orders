@@ -1,11 +1,52 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
 @import "tailwindcss";
 
 @theme {
-  --color-mainBackColor: oklch(57.7% 0.245 27.325);
-  --color-mainTextColor: oklch(0.446 0.03 256.802);
+  --color-Color50: #fbf7f1;
+  --color-Color100: #f8f1e7;
+  --color-Color200: #ebd7bd;
+  --color-Color300: #deba93;
+  --color-Color900: #351d15;
+  --color-logoColor: #ee4e2c;
+  --color-footerColor: #262626;
 }
 
 body {
-  font-family: "Cairo", sans-serif;
+  font-family: "Tajawal", sans-serif;
+  /* font-family: "National Park", sans-serif; */
+}
+
+.backgroundpattern {
+  background-color: #e0e0e5;
+  opacity: 0.5;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #e0e0e5 20%,
+      #e0e0e5 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #e0e0e5 20%,
+        #e0e0e5 80%,
+        transparent 80%,
+        transparent
+      )
+      17.5px 17.5px,
+    linear-gradient(
+        #f78545 1.4000000000000001px,
+        transparent 1.4000000000000001px
+      )
+      0 -0.7000000000000001px,
+    linear-gradient(
+        90deg,
+        #f78545 1.4000000000000001px,
+        #e0e0e5 1.4000000000000001px
+      ) -0.7000000000000001px 0;
+  background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
 }

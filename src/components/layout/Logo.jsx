@@ -1,4 +1,4 @@
-import logoImage from "./../../assets/logo.png";
+import logoImage from "./../../assets/mainLogo.png";
 export default function Logo({ style, type }) {
   return (
     <div

@@ -9,5 +9,9 @@
     "userPassword": "userPassword",
     "loginWithGoogle": "Login With Google",
     "loginWithFaceBook": "Login With FaceBook"
+  },
+  "navbar": {
+    "home": "Home",
+    "menu": "Menu"
   }
 }
