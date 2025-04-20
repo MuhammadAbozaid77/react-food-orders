@@ -25,6 +25,14 @@ export default function Navigations() {
 
         {/* <Route index element={<Navigate replace to="home" />} />
           <Route path="home" element={<Home />} /> */}
+        {/* ========================================================================*/}
+        <Route element={<AuthLayout />}>
+          {/* <Route index element={<Home />} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin-signUp" element={<AdminSignUp />} />
+        </Route>
+        {/* ========================================================================*/}
 
         <Route
           element={
@@ -34,15 +42,11 @@ export default function Navigations() {
           }
         >
           <Route index element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/order-cart" element={<OrderCart />} />
+          <Route path="menu" element={<Menu />} />
+          <Route path="order-cart" element={<OrderCart />} />
         </Route>
-        <Route element={<AuthLayout />}>
-          {/* <Route index element={<Home />} /> */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/admin-login" element={<AdminLogin />} />
-          <Route path="/admin-signUp" element={<AdminSignUp />} />
-        </Route>
+        {/* ========================================================================*/}
+
         <Route
           element={
             <AdminProtectedRouting>

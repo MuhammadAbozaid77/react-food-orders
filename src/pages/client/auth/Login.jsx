@@ -3,7 +3,7 @@ import CustomInput from "./../../../components/ui/CustomInput";
 import { useTranslation } from "react-i18next";
 import HeaderContent from "../../../components/ui/HeaderContent";
 import Button from "./../../../components/ui/Button";
-import logoImage from "./../../../assets/logo0.png";
+import logoImage from "./../../../assets/mainLogo.png";
 import Spinner from "./../../../components/ui/Spinner";
 import useUserLogin from "./../../../hooks/user-hooks/useUserLogin";
 import { FaFacebook } from "react-icons/fa";
@@ -25,7 +25,7 @@ export default function Login() {
   const isLoading = false;
 
   return (
-    <div className="lg:w-[500px] w-full  border border-gray-300 bg-white shadow rounded-[10px] ">
+    <div className="lg:w-[550px] w-full  bg-white  rounded-[10px] ">
       <div className="p-5 flex justify-center items-center ">
         <img className="md:w-[180px] w-[150px]" src={logoImage} alt="" />
       </div>
@@ -67,7 +67,7 @@ export default function Login() {
                 <Spinner />
               </div>
             ) : (
-              <div className="flex justify-between items-center gap-1   w-[220px]">
+              <div className="flex justify-between items-center gap-1   w-[350px]">
                 {t("login.loginWithGoogle")}
                 <div className="border border-gray-300 shadow  p-1 rounded-lg bg-white">
                   <FcGoogle size={30} />
@@ -81,7 +81,7 @@ export default function Login() {
                 <Spinner />
               </div>
             ) : (
-              <div className="flex justify-between items-center   gap-1 w-[220px]">
+              <div className="flex justify-between items-center   gap-1 w-[350px]">
                 {t("login.loginWithFaceBook")}
                 <div className="border border-gray-300 shadow  p-1 rounded-lg bg-white text-blue-700">
                   <FaFacebook size={30} />

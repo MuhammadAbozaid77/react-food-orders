@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
 import image1 from "../../../assets/advert/advert1.png";
 import image3 from "../../../assets/advert/advert3.jpg";
 import image4 from "../../../assets/advert/advert4.jpg";
+import image7 from "../../../assets/advert/advert7.jpg";
 
-const images = [image1, image3, image4];
+const images = [image7];
 
 export default function HomeSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,11 +32,11 @@ export default function HomeSlider() {
   return (
     <div id="home-slider" className="relative w-full">
       {/* Carousel Wrapper */}
-      <div className="relative overflow-hidden rounded-lg 2xl:h-[600px]  md:h-[400px] h-[300px]">
+      <div className="relative overflow-hidden rounded-lg  xl:h-[500px] lg:h-[450px]   h-[400px]">
         <img
           src={images[currentIndex]}
           alt={`Advert ${currentIndex + 1}`}
-          className="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out 2xl:h-[600px]  md:h-[400px] h-[300px]"
+          className="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out  xl:h-[500px] lg:h-[450px]   h-[400px]"
         />
       </div>
 

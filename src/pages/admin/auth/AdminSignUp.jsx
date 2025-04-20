@@ -3,7 +3,7 @@ import CustomInput from "./../../../components/ui/CustomInput";
 import { useTranslation } from "react-i18next";
 import HeaderContent from "../../../components/ui/HeaderContent";
 import Button from "./../../../components/ui/Button";
-import logoImage from "./../../../assets/logo0.png";
+import logoImage from "./../../../assets/mainLogo.png";
 import Spinner from "./../../../components/ui/Spinner";
 import useLogin from "../../../hooks/admin-hooks/useLogin";
 export default function AdminSignUp() {

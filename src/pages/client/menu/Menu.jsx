@@ -1,16 +1,16 @@
+import GridFour from "../../../components/ui/GridFour";
 import Wrapper from "../../../components/ui/Wrapper";
 import { productsJson } from "../../../utils/data";
+import ProductItem from "../../admin/menu-products/ProductItem";
 
 export default function Menu() {
   return (
     <Wrapper>
-      <div className="">
-        {productsJson.map((el) => (
-          <div key={el.id}>
-            <h1> {el.name} </h1>
-          </div>
+      <GridFour>
+        {productsJson?.map((item, index) => (
+          <ProductItem item={item} key={index} />
         ))}
-      </div>
+      </GridFour>
     </Wrapper>
   );
 }
