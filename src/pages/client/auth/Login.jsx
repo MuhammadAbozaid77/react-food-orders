@@ -69,7 +69,7 @@ export default function Login() {
             ) : (
               <div className="flex justify-between items-center gap-1   w-[350px]">
                 {t("login.loginWithGoogle")}
-                <div className="border border-gray-300 shadow  p-1 rounded-lg bg-white">
+                <div className=" shadow  p-1 rounded-lg bg-white">
                   <FcGoogle size={30} />
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function Login() {
             ) : (
               <div className="flex justify-between items-center   gap-1 w-[350px]">
                 {t("login.loginWithFaceBook")}
-                <div className="border border-gray-300 shadow  p-1 rounded-lg bg-white text-blue-700">
+                <div className=" shadow  p-1 rounded-lg bg-white text-blue-700">
                   <FaFacebook size={30} />
                 </div>
               </div>

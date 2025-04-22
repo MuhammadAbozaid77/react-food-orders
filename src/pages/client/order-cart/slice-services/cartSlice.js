@@ -5,15 +5,7 @@ const initialState = {
   //   totalPrice: 0,
   //   numberOfItems: 0,
 
-  cart: [
-    {
-      id: 12,
-      name: "one",
-      quantity: 2,
-      unitPrice: 16,
-      totalPrice: 16,
-    },
-  ],
+  cart: [],
 };
 
 const cartSlice = createSlice({

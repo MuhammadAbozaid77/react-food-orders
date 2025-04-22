@@ -1,7 +1,7 @@
 import Carousel from "react-elastic-carousel";
 import { productsJson } from "../../../utils/data";
 import { MdFastfood } from "react-icons/md";
-import ProductItem from "../../admin/menu-products/ProductItem";
+import ProductCard from "../menu/components/ProductCard";
 
 export default function ProductsSlider() {
   const breakPoints = [
@@ -33,7 +33,7 @@ export default function ProductsSlider() {
         infinite={true} // Optional: keep sliding in loop
       >
         {productsJson?.map((item, index) => (
-          <ProductItem item={item} key={index} />
+          <ProductCard item={item} key={index} />
         ))}
       </Carousel>
     </div>
