@@ -1,5 +1,5 @@
-/* @import url("https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"); */
 
 @import "tailwindcss";
 
@@ -14,8 +14,8 @@
 }
 
 body {
-  font-family: "Tajawal", sans-serif;
-  /* font-family: "National Park", sans-serif; */
+  /* font-family: "Tajawal", sans-serif; */
+  font-family: "Montserrat", sans-serif;
 }
 
 .backgroundpattern {
@@ -49,4 +49,13 @@ body {
         #e0e0e5 1.4000000000000001px
       ) -0.7000000000000001px 0;
   background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
+}
+
+.box {
+  --mask: radial-gradient(223.61px at 50% 300px, #000 99%, #0000 101%)
+      calc(50% - 200px) 0/400px 100%,
+    radial-gradient(223.61px at 50% -200px, #0000 99%, #000 101%) 50% 100px/400px
+      100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }

@@ -1,5 +1,7 @@
 {
-  "one": "Welcome to React and react-i18next",
+  "general": {
+    "noItemInCart": "No Items Here"
+  },
   "menu": {
     "addNewCategory": "Add New Category"
   },
