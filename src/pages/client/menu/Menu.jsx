@@ -1,7 +1,6 @@
 import GridFour from "../../../components/ui/GridFour";
 import Wrapper from "../../../components/ui/Wrapper";
 import { productsJson } from "../../../utils/data";
-import ProductItem from "../../admin/menu-products/ProductItem";
 import ProductCard from "./components/ProductCard";
 import SearchComponent from "./components/SearchComponent";
 

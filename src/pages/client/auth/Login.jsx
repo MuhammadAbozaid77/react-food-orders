@@ -61,34 +61,40 @@ export default function Login() {
         />
 
         <div className="flex flex-col gap-4 mt-[20px]">
-          <Button type="button" disabled={isLoading}>
+          <div
+            className="bg-Color100 shadow-xl  rounded-xl p-2 flex justify-center"
+            disabled={isLoading}
+          >
             {isLoading ? (
               <div className="flexCenter">
                 <Spinner />
               </div>
             ) : (
-              <div className="flex justify-between items-center gap-1   w-[350px]">
+              <div className=" cursor-pointer flex justify-center items-center  gap-2 font-semibold text-gray-500 w-[350px]">
                 {t("login.loginWithGoogle")}
-                <div className=" shadow  p-1 rounded-lg bg-white">
+                <div className="bg-white p-1 rounded-lg ">
                   <FcGoogle size={30} />
                 </div>
               </div>
             )}
-          </Button>
-          <Button type="button" disabled={isLoading}>
+          </div>
+          <div
+            className="bg-Color100 shadow-xl  rounded-xl p-2 flex justify-center "
+            disabled={isLoading}
+          >
             {isLoading ? (
               <div className="flexCenter">
                 <Spinner />
               </div>
             ) : (
-              <div className="flex justify-between items-center   gap-1 w-[350px]">
+              <div className=" cursor-pointer flex justify-center items-center  gap-2 font-semibold text-gray-500 w-[350px]">
                 {t("login.loginWithFaceBook")}
-                <div className=" shadow  p-1 rounded-lg bg-white text-blue-700">
+                <div className="p-1 rounded-lg text-blue-800 bg-white">
                   <FaFacebook size={30} />
                 </div>
               </div>
             )}
-          </Button>
+          </div>
         </div>
 
         <div className="my-[20px]">

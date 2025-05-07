@@ -1,5 +1,7 @@
 {
-  "one": "مل عام  وانتم بخير   and -",
+  "general": {
+    "noItemInCart": "لا توجد منتجات هنا"
+  },
 
   "menu": {
     "addNewCategory": "إضافة تصنيف جديد"

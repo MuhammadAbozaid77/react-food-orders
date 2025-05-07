@@ -4,6 +4,7 @@ import HomeSlider from "./HomeSlider";
 import CategorySlider from "./CategorySlider";
 import ProductsSlider from "./ProductsSlider";
 import Advertisements from "./Advertisements";
+import AdvertsimsntCard from "../../../components/ui/AdvertsimsntCard";
 
 export default function Home() {
   const { t } = useTranslation();

@@ -1,11 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  //   cart: [],
-  //   totalPrice: 0,
-  //   numberOfItems: 0,
-
   cart: [],
+  totalPrice: 0,
+  totalCount: 0,
 };
 
 const cartSlice = createSlice({
@@ -36,6 +34,10 @@ const cartSlice = createSlice({
     clearCart(state) {
       state.cart = [];
     },
+
+    getTotalCount(state) {
+      state.totalCount = state.cart.length;
+    },
   },
 });
 
@@ -48,18 +50,9 @@ export const {
 } = cartSlice.actions;
 export default cartSlice.reducer;
 
-// extraReducers : (builder)=>{
-//   builder.addCase(GetProfileProvierCompany.pending, (state, action) => {
-//     state.isLoading = true;
-//     state.error = null;
-//   });
-//   builder.addCase(GetProfileProvierCompany.fulfilled, (state, action) => {
-//     state.isLoading = false;
-//     state.error = null;
-//     state.data = action.payload.data;
-//   });
-//   builder.addCase(GetProfileProvierCompany.rejected, (state, action) => {
-//     state.isLoading = false;
-//     state.error = action.payload.message;
-//   });
-// }
+// export const cartTotalPrice = (state) => {
+//   state?.cart?.reduce((sum, item) => sum + item?.quantity);
+// };
+// export const cartTotalQuantity = (state) => {
+//   state.cart.cart.reduce((sum, item) => sum + item.totalPrice);
+// };
