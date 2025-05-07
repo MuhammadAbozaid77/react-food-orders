@@ -1,15 +1,20 @@
 import { Outlet } from "react-router-dom";
-import Header from "../../components/layout/Header";
-import Footer from "../../components/layout/Footer";
+import LayoutHeader from "../../components/layout/LayoutHeader";
+import LayoutSidebar from "../../components/layout/LayoutSidebar";
 
 export default function Layout() {
   return (
-    <div className="bg-Color50 min-h-[100vh] flex flex-col justify-between ">
-      <Header />
-      <div className="xl:px-[150px] lg:px-[80px]   md:p-[50px]   gap-5  p-[10px]  min-h-[calc(100vh-180px)] ">
-        <Outlet />
+    <div className="max-h-[100vh]  flex  justify-between ">
+      <LayoutSidebar />
+
+      <div className="bg-Color100 ">
+        <LayoutHeader />
+        <div className="px-[40px]">
+          <Outlet />
+        </div>
       </div>
-      <Footer />
+
+      <div className="min-w-[400px] h-[100vh] bg-white">ddd</div>
     </div>
   );
 }

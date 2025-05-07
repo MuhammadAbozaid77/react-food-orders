@@ -12,17 +12,17 @@ export default function Home() {
   return (
     <div className="flex justify-between w-[100%] gap-5">
       <div className=" w-[100%]">
-        <Wrapper>
+        {/* <Wrapper>
           <HomeSlider />
-        </Wrapper>
+        </Wrapper> */}
         {/* <Wrapper style={"p-5"}>
           <CategorySlider />
         </Wrapper> */}
-        <Wrapper style={"p-5 "}>
+        {/* <Wrapper style={"p-5 "}>
           <ProductsSlider />
-        </Wrapper>
+        </Wrapper> */}
       </div>
-      <Advertisements />
+      {/* <Advertisements /> */}
     </div>
   );
 }
